@@ -7,7 +7,6 @@ using System.Runtime.Serialization;
 
 namespace Entidades
 {
-    [DataContract(Namespace="")]
     public class GrupoUsuarioEntity : EntidadSQL
     {
         public override string GetTabla()
@@ -15,7 +14,6 @@ namespace Entidades
             return "dbo.tblGrupoUsuario";
         }
 
-        [DataMember]
         [CampoBD(esIndice = true)]
         protected int id;
         public int Id
@@ -26,7 +24,6 @@ namespace Entidades
             }
         }
 
-        [DataMember]
         [CampoBD]
         protected string nombre;
         public string Nombre
