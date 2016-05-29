@@ -7,7 +7,6 @@ using System.Web;
 
 namespace Entitades
 {
-    [DataContract(Namespace = "")]
     public class RelUserGroupEntity : EntidadSQL
     {
         public override string GetTabla()
@@ -16,7 +15,6 @@ namespace Entitades
         }
 
         [CampoBD(esIndice = true)]
-        [DataMember]
         protected int id;
         public int Id
         {
@@ -24,7 +22,6 @@ namespace Entitades
         }
         
         [CampoBD]
-        [DataMember]
         protected int idUsuario;
 
         public int IdUsuario
@@ -34,7 +31,6 @@ namespace Entitades
         }
         
         [CampoBD]
-        [DataMember]
         protected int idGrupo;
         public int IdGrupo
         {
