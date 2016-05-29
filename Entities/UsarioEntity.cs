@@ -7,7 +7,6 @@ using System.Runtime.Serialization;
 
 namespace Entitades
 {
-    [DataContract(Namespace = "")]
     public class UsuarioEntity : EntidadSQL
     {
         public override string GetTabla()
@@ -15,7 +14,6 @@ namespace Entitades
             return "dbo.tblUsuario";
         }
 
-        [DataMember]
         [CampoBD(esIndice = true)]
         protected int id;
         public int Id
@@ -23,7 +21,6 @@ namespace Entitades
             get { return id; }
         }
 
-        [DataMember]
         [CampoBD]
         protected int idPais;
         public int IdPais
@@ -32,7 +29,6 @@ namespace Entitades
             set { idPais = value; }
         }
 
-        [DataMember]
         [CampoBD]
         protected string nombre;
         public string Nombre
@@ -41,7 +37,6 @@ namespace Entitades
             set { nombre = value; }
         }
 
-        [DataMember]
         [CampoBD]
         protected string password;
         public string Password
@@ -50,7 +45,6 @@ namespace Entitades
             set { password = value; }
         }
 
-        [DataMember]
         [CampoBD]
         protected string email;
         public string Email
@@ -59,7 +53,6 @@ namespace Entitades
             set { email = value; }
         }
 
-        [DataMember]
         [CampoBD]
         protected string ciudad;
         public string Ciudad
@@ -68,7 +61,6 @@ namespace Entitades
             set { ciudad = value; }
         }
 
-        [DataMember]
         [CampoBD]
         protected string direccion;
         public string Direccion
